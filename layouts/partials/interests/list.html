@@ -1,0 +1,33 @@
+<section class="section">
+
+  {{ $interests := partialCached "func/GetInterests" . "interests" }}
+  {{ $paginator := .Paginate $interests }}
+  {{ range $index, $interest := $paginator.Pages }}
+
+    <div class="project">
+
+      <a href="{{ $interest.RelPermalink }}"></a>
+
+      {{ with $interest.Params.thumbnail }}
+        <img src="{{ $interest.RelPermalink }}/{{ $interest.Params.thumbnail }}">
+      {{ end }}
+
+      <h3>{{ $interest.Params.title }}</h3>
+      
+      <div class="align-container">
+        <div class="information-container">
+          <p class="description">
+            {{ $interest.Params.description }}
+          </p>
+        </div>
+
+        {{ range .Params.tags }}
+          <button type="button" class="btn btn-light">{{ . }}</button>
+        {{ end }}
+      </div>
+
+    </div>
+
+  {{ end }}
+
+</section>

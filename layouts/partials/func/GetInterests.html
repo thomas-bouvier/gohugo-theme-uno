@@ -1,0 +1,21 @@
+{{/*
+  GetProjects
+
+  @context Page (.)
+
+  @access public
+
+  @return Collection
+          - Page (.)
+
+  @example - Go Template
+    {{ $projects := partialCached "func/GetInterests" . "interests" }}
+*/}}
+
+{{ $interests := slice }}
+
+{{ with where site.RegularPages "Type" "interests" }}
+  {{ $interests = . }}
+{{ end }}
+
+{{ return $interests }}

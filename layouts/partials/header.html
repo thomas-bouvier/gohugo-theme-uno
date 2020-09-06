@@ -1,0 +1,29 @@
+{{ $i18n := .Site.IsMultiLingual }}
+
+<header class="nav-container">
+
+  <nav class="nav-section">
+
+    <a class="logo-link" href="/">
+      <span class="logo">{{ .Site.Params.logo }}</span>
+      <span class="logo-small">{{ .Site.Params.logoSmall }}</span>
+      <span class="header-hidden">Navigate back to the homepage</span>
+    </a>
+
+    <div class="nav-controls">
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL | relLangURL }}">
+          {{ .Pre }}
+          <span>{{ .Name }}</span>
+        </a>
+      {{ end }}
+
+      {{ if $i18n }}
+        {{ partial "components/lang-selector.html" . }}
+      {{ end }}
+
+    </div>
+
+  </nav>
+
+</header>
