@@ -10,19 +10,9 @@
       <span class="header-hidden">Navigate back to the homepage</span>
     </a>
 
-    <div class="nav-controls">
-      {{ range .Site.Menus.main }}
-        <a href="{{ .URL | relLangURL }}">
-          {{ .Pre }}
-          <span>{{ .Name }}</span>
-        </a>
-      {{ end }}
-
-      {{ if $i18n }}
-        {{ partial "components/lang-selector.html" . }}
-      {{ end }}
-
-    </div>
+    {{ if $i18n }}
+      {{ partial "components/lang-selector.html" . }}
+    {{ end }}
 
   </nav>
 

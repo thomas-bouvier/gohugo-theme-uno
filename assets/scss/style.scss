@@ -5,18 +5,9 @@
 @import "project.scss";
 @import "buttons.scss";
 @import "footer.scss";
+@import "sidebar.scss";
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Inter:wght@400&display=swap');
-
-@font-face {
-  font-family: 'Domaine';
-  src: url('../fonts/domaine/DomaineText-Regular.woff2') format('truetype');
-}
-
-@font-face {
-  font-family: 'Calibre';
-  src: url('../fonts/calibre/Calibre-Regular.woff2') format('truetype');
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
 
 * {
   margin: 0;
@@ -36,11 +27,16 @@
 body {
   color: var(--secondary);
   background-color: var(--background-color);
+  font-family: 'Roboto', sans-serif;
+}
 
+.content {
+  margin-left: $sidebar-width; /* Same as the width of the sidebar */
+  padding: 0px 10px;
 }
 
 p {
-  font-family: 'Calibre', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -48,7 +44,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Domaine', serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   color: var(--primary)
 }

@@ -1,20 +1,14 @@
 {{ $lang  := site.Language.LanguageName }}
 {{ $langs := site.Home.Translations }}
 
-<div class="navbar-item has-dropdown is-hoverable">
-  <a class="navbar-link is-arrowless">
-    <span class="icon has-text-primary">
-    </span>
-    <span>
-      {{ $lang }}
-    </span>
-  </a>
+<div class="dropdown show">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{ $lang }}
+  </button>
 
-  <div class="navbar-dropdown">
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
     {{ range $langs }}
-    <a class="navbar-item" href="{{ .RelPermalink }}">
-      {{ .Language.LanguageName }}
-    </a>
+      <a class="dropdown-item" href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
     {{ end }}
   </div>
 </div>
