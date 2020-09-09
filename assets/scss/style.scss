@@ -31,8 +31,19 @@ body {
 }
 
 .content {
-  margin-left: $sidebar-width; /* Same as the width of the sidebar */
-  padding: 0px 10px;
+  padding: 40px 20px;
+}
+
+/* Center container in available real estate */
+@media (min-width: 990px) {
+  .content {
+    padding: 60px 0;
+  }
+  .container {
+    width: 55%;
+    margin-left: 35%;
+    margin-right: 10%;
+  }
 }
 
 p {
@@ -60,20 +71,6 @@ a {
   }
 }
 
-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  outline: none;
-  background: transparent;
-  cursor: pointer;
-
-  &:focus {
-    outline: none;
-  }
-}
-
 .section {
   width: 100%;
   margin: 0 auto;
@@ -83,44 +80,5 @@ button {
   @media screen and (max-width: $phone) {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-  }
-}
-
-.content {
-  margin-top: 170px;
-  margin-bottom: 100px;
-}
-
-.hero {
-  margin-bottom: 120px;
-}
-
-a.btn-light,
-button.btn-light {
-  background-color: white;
-  box-shadow: 0 6px 50px rgba(0, 0, 0, .06);
-  border-radius: 16px;
-  font-weight: 200;
-  font-size: 0.9em;
-}
-
-button {
-  .btn-primary {
-    background-color: #000c21;
-    color: white;
-    border: none;
-    box-shadow: 0 6px 50px rgba(0, 0, 0, .06);
-    border-radius: 16px;
-    font-weight: 200;
-    font-size: 0.9em;
-  }
-
-  .btn-warning {
-    background-color: #ffd696;
-    border: none;
-    box-shadow: 0 6px 50px rgba(0, 0, 0, .06);
-    border-radius: 16px;
-    font-weight: 200;
-    font-size: 0.9em;
   }
 }
