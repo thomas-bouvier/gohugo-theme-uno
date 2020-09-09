@@ -1,5 +1,15 @@
 {{ define "main" }}
 
+  <div class="section">
+
+    <h1>{{ .Title }}</h1>
+
+    <p class="description">
+      {{ .Description }}
+    </p>
+
+  </div>
+
   {{ partial "interests/list.html" . }}
 
 {{ end }}
