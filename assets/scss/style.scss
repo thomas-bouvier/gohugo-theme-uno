@@ -8,6 +8,7 @@
 @import "sidebar.scss";
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
 * {
   margin: 0;
@@ -30,17 +31,10 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.content {
-  padding: 40px 20px;
-}
-
 /* Center container in available real estate */
 @media (min-width: 990px) {
   .content {
     padding: 60px 0;
-  }
-  .container {
-    width: 55%;
     margin-left: 35%;
     margin-right: 10%;
   }
@@ -51,11 +45,10 @@ p {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Abril Fatface', cursive;
   font-weight: 400;
   color: var(--primary)
 }
@@ -71,11 +64,13 @@ a {
   }
 }
 
+.content {
+  padding: 20px;
+}
+
 .section {
   width: 100%;
   margin: 0 auto;
-  padding-left: 4rem;
-  padding-right: 4rem;
 
   @media screen and (max-width: $phone) {
     padding-left: 1.5rem;

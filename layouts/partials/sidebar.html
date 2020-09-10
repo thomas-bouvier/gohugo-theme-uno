@@ -1,12 +1,28 @@
 {{ $i18n := .Site.IsMultiLingual }}
 
 <header class="masthead">
+
   <div class="masthead-inner">
-    <h1>{{ .Site.Title }}</h1>
+
+    <a href="{{ "/" | relLangURL }}">
+
+      <div class="icon">
+        <img src="/icon.jpeg">
+      </div>
+
+      <h1>{{ .Site.Title }}</h1>
+
+    </a>
+    
     <p class="lead">{{ .Site.Params.description }}</p>
 
     <nav class="colophon">
       <ul class="colophon-links">
+        <li>
+          <a href="{{ "/" | relLangURL }}">
+            Home
+          </a>
+        </li>
         {{ range .Site.Menus.main }}
           <li>
             <a href="{{ .URL | relLangURL }}">
@@ -17,7 +33,7 @@
         {{ end }}
       </ul>
 
-      <p>&copy; 2014. {{ .Site.Params.author }} All rights reserved.</p>
+      <p>&copy; 2020. {{ .Site.Params.author }} All rights reserved.</p>
 
     </nav>
   </div>
