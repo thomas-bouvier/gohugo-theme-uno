@@ -2,6 +2,10 @@
   color: #fff;
   background-color: var(--primary-color);
 
+  a {
+    color: #fff;
+  }
+
   .icon {
     img {
       width: 125px;
@@ -33,6 +37,18 @@
   }
 }
 
+.lang-selector {
+    padding: 40px 40px 0 40px;
+
+    li {
+      display: inline;
+
+      &.selected {
+        font-weight: 700;
+      }
+    }
+}
+
 .masthead-inner {
   padding: 40px;
 
@@ -56,11 +72,6 @@
       color: inherit;
       font-size: 1.2em;
       line-height: 1.6em;
-
-      a {
-        color: #fff;
-        text-decoration: none;
-      }
     }
   }
 
