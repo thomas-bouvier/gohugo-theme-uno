@@ -1,7 +1,5 @@
-$phone: 440px;
-$phone-large: 575px;
-$tablet: 767px;
-$desktop: 1070px;
+$sidebar-width: 33%;
+$breakpoint: 990px;
 
 body {
   --primary: #000;
@@ -10,5 +8,3 @@ body {
   --secondary-color: #0046D0;
   --background-color: #ffffff;
 }
-
-$sidebar-width: 300px;

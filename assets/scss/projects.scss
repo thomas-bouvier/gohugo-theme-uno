@@ -3,12 +3,6 @@ section#projects {
   padding-bottom: 35px;
 }
 
-@media screen and (max-width: $tablet) {
-  section#projects {
-    margin-top: 110vh;
-  }
-}
-
 .project {
   position: relative;
   /* to make the entire div clickable */
@@ -28,7 +22,7 @@ section#projects {
     margin-bottom: 20px;
   }
   
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $breakpoint) {
     width: 47%;
     margin-right: 4%;
   

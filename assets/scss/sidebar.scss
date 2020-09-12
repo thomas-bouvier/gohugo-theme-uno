@@ -9,23 +9,22 @@
       padding-bottom: 1em;
     }
   }
+
   h1 {
     margin-top: 0;
     color: #fff;
   }
+
   .lead {
     margin-bottom: 0;
   }
-  a {
-    color: #fff;
-  }
 
-  @media (min-width: 990px) {
+  @media (min-width: $breakpoint) {
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
-    width: 33%;
+    width: $sidebar-width;
     margin-bottom: 0;
 
     h1 {
@@ -35,9 +34,9 @@
 }
 
 .masthead-inner {
-  padding: 20px;
+  padding: 40px;
 
-  @media (min-width: 990px) {
+  @media (min-width: $breakpoint) {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -45,7 +44,6 @@
   }
 }
 
-/* Footer area of masthead */
 .colophon {
   margin-top: 20px;
   color: rgba(255,255,255,.5);
@@ -56,10 +54,17 @@
   
     li {
       color: inherit;
+      font-size: 1.2em;
+      line-height: 1.6em;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
     }
   }
 
-  @media (min-width: 990px) {
+  @media (min-width: $breakpoint) {
     margin-top: 40px;
   }
 }
