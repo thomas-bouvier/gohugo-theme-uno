@@ -4,7 +4,7 @@
   {{ $paginator := .Paginate $interests }}
   {{ range $index, $interest := $paginator.Pages }}
 
-    <div class="project">
+    <div class="item">
 
       <a href="{{ $interest.RelPermalink }}"></a>
 
@@ -16,9 +16,12 @@
       
       <div class="align-container">
         <div class="information-container">
+
           <p class="description">
             {{ $interest.Params.description }}
           </p>
+
+          <span class="see-more">➔</span>
         </div>
         
       </div>

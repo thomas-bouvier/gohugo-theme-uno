@@ -2,6 +2,10 @@
 
   {{ partial "hero.html" . }}
 
+  <div class="welcome">
+    {{ .Content }}
+  </div>
+
   {{ partial "interests/list.html" . }}
 
 {{ end }}

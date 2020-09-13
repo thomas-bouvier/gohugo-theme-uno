@@ -1,11 +1,19 @@
 .heading-container {
-  margin: 100px 0;
+  margin: 75px 0;
+
+  h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 1.15;
+    margin: 0;
+  }
+
+  p {
+    margin-top: 1rem;
+  }
 }
 
-.hero-heading {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 2.5rem;
-  line-height: 1.15;
-  margin: 0;
+.welcome {
+  margin-bottom: 50px;
 }

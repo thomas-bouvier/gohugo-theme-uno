@@ -24,15 +24,16 @@
 
     <nav class="colophon">
       <ul class="colophon-links">
+
         <li>
           <a href="{{ "/" | relLangURL }}">
             {{ .Site.Params.home }}
           </a>
         </li>
+
         {{ range .Site.Menus.main }}
           <li>
             <a href="{{ .URL | relLangURL }}">
-              {{ .Pre }}
               <span>{{ .Name }}</span>
             </a>
           </li>
