@@ -12,6 +12,22 @@ article {
     margin-bottom: 2.5rem;
   }
 
+  figure {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    img {
+      max-width: 100%;
+      margin: auto;
+      
+    }
+
+    figcaption {
+      vertical-align: bottom;
+    }
+  }
+
   .img-zoom {
     width: 80%;
     margin: 35px auto;
